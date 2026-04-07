@@ -28,6 +28,24 @@ function sc_format(ex, acc=4, max=4) {
 	}
 }
 
+function log_format(ex,base=10) {
+  if (ex.lt(1)) {
+    return sci_format(ex)
+  } else {
+    return "e" + sci_format(ex.logBase(base))
+  }
+}
+
+function square_format(ex) {
+  if (ex.lt(4)) {
+    return ex.floor()
+  } else if (ex.lt(16)) {
+    return square_format(ex.sqrt()) + "<sup>2</sup> + " + square_format(ex.sub(ex.sqrt().floor().pow(2)))
+  } else {
+    return "(" + square_format(ex.sqrt()) + ")<sup>2</sup> + " + square_format(ex.sub(ex.sqrt().floor().pow(2)))
+  }
+}
+
 const ILLIONS = {
 	1: {
 		data: {
