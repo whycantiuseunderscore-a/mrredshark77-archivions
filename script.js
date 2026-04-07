@@ -3,4 +3,3 @@ function load2() {
 }
 
 let t = 0
-}
