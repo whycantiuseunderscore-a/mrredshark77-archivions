@@ -443,4 +443,3 @@ function st_format(x,acc=4,p=5) {
 		return neg+(ee.gte(4)?"":m.toFixed(E(3).sub(e.sub(e3m)).add(acc==0?0:1).toNumber())+" ")+final+(t1.gt(1)?"illion":"")
 	}
 }
-}
