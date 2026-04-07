@@ -8,7 +8,7 @@
     <div id="num_result" onclick="
     setInterval(_=>{
         t += 1
-        let b = E(Math.E).tetrate(t/325.65839292722662822929828)
+        let b = E(Math.E).tetrate(t.div(200))
         document.getElementById(&quot;num_result&quot;).innerHTML = `${sc_format(b)} <br>= ${square_format(b)} <br>= ${st_format(b)} <br>= ${log_format(b)}`
     }, 1000/30)
     ">Press here to Start</div>
